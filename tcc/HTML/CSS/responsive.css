@@ -1,0 +1,127 @@
+/* Estilos específicos para responsividade */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+    }
+    
+    .banner {
+        height: 60vh;
+    }
+    
+    .banner-content h2 {
+        font-size: 3rem;
+    }
+    
+    .accommodations-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh;
+    }
+    
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+    
+    .banner-content p {
+        font-size: 1.1rem;
+    }
+    
+    .banner-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 1rem;
+    }
+}
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+    .banner {
+        height: 40vh;
+    }
+    
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.3rem; }
+    
+    .auth-form {
+        padding: 1rem;
+    }
+    
+    .accommodation-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .illustrative-image {
+        height: 200px;
+    }
+    
+    .image-placeholder span {
+        font-size: 3rem;
+    }
+}
+
+/* Orientação paisagem em celulares */
+@media (max-height: 500px) and (orientation: landscape) {
+    .banner {
+        height: 100vh;
+    }
+    
+    .auth-section {
+        min-height: 100vh;
+    }
+}
+
+/* Impressão */
+@media print {
+    .menu-toggle,
+    nav,
+    .btn-primary,
+    .btn-secondary,
+    footer {
+        display: none;
+    }
+    
+    .banner {
+        height: auto;
+        background: none;
+    }
+    
+    .banner-content {
+        color: black;
+    }
+}
